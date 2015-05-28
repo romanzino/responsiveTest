@@ -1,0 +1,37 @@
+@import "settings"
+
+[class*="col-"]
+    width 100%
+    float left
+    min-height 1px
+
+.wrapper
+    margin 0 auto
+
++above(1px)
+    for i in (1..grid-columns-count)
+        .col-xs-{i}
+            width ((i/12)*100)%
+    
+    .wrapper
+        width 100%
+        padding 0 22px
+    
++above(grid-tablet)
+    for i in (1..grid-columns-count)
+        .col-sm-{i}
+            width ((i/12)*100)%
+    
+    .wrapper
+        width 768px
+        padding 0 29px
+
++above(grid-desktop)
+    for i in (1..grid-columns-count)
+        .col-md-{i}
+            width ((i/12)*100)%
+            
+    .wrapper
+        width 1024px
+        margin 0 auto
+        padding 0 18px

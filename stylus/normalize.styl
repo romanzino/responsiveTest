@@ -1,0 +1,47 @@
+@import "settings"
+
+reset()
+
+button, select, input
+	-webkit-appearence none
+
+.dl-inline dd
+	display inline
+	margin 0
+.dl-inline dd
+	&:after
+		block()
+		content ''
+.dl-inline dt
+	display inline-block
+
+a, button
+	nodecorate()
+	transition all 100ms linear
+	
+	&:focus
+		outline 0
+
+*
+	box-sizing border-box
+	
+.clearfix, .row
+	clearfix()
+
+.upcase
+	upcase()
+
+.left
+	float left
+
+.hidden-text
+	position absolute
+	size 1px 1px
+	padding 0
+	margin -1px
+	overflow hidden
+	clip rect(0,0,0,0)
+	border 0
+
+strong
+	fw bold

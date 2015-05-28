@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<title>Responsive test task</title>
+	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700'>
+	<link rel="stylesheet" href="build/main.css">
+	<!--[if IE 8]>
+	<link rel="stylesheet" href="css/ie.css">
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="js/ie.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="wrapper">
+		<div class="product">
+			<h1 class="product__name">Nautical T-Shirt</h1>
+
+			<div class="row">
+				<div class="col-xs-12 col-sm-8 col-md-8">
+					<!-- Product image -->
+					<div class="product__img-wrapper">
+						<img class="product__img" src="images/product/1.jpg" height="364" alt="">
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<!-- Order form -->
+					<form action="#" class="order-form">
+						<!-- Color select -->
+						<div class="order-form__row clearfix">
+							<div class="col-xs-3 col-sm-12 col-md-3">
+								<div class="order-form__label">Color</div>
+							</div>
+							<div class="col-xs-9 col-sm-12 col-md-9">
+								<div class="order-form__color-variants" data-color-variants>
+									<input class="order-form__radio-color" type="radio" name="productColor" value="color1" id="productColor1" checked data-color-input>
+									<label class="order-form__label-color order-form__label-color--gray active" for="productColor1" data-color-select></label>
+
+									<input class="order-form__radio-color" type="radio" name="productColor" value="color2" id="productColor2" data-color-input>
+									<label class="order-form__label-color order-form__label-color--blue" for="productColor2" data-color-select></label>
+
+									<input class="order-form__radio-color" type="radio" name="productColor" value="color3" id="productColor3" data-color-input>
+									<label class="order-form__label-color order-form__label-color--violet" for="productColor3" data-color-select></label>
+
+									<input class="order-form__radio-color" type="radio" name="productColor" value="color4" id="productColor4" data-color-input>
+									<label class="order-form__label-color order-form__label-color--purple" for="productColor4" data-color-select></label>
+								</div>
+							</div>
+						</div><!-- Color select end -->
+						<!-- Size select -->
+						<div class="order-form__row clearfix">
+							<div class="col-xs-3 col-sm-12 col-md-3">
+								<label for="productSizeSelect" class="order-form__label">Size</label>
+							</div>
+							<div class="col-xs-9 col-sm-12 col-md-9">
+								<div class="order-form__select-wrapper">
+									<select class="order-form__select" name="productSize" id="productSizeSelect">
+										<option value="" disabled selected>Select one</option>
+										<option value="1">s</option>
+										<option value="1">m</option>
+										<option value="1">l</option>
+									</select>
+								</div>
+							</div>
+						</div><!-- Size select end -->
+						<!-- Quantity select -->
+						<div class="order-form__row clearfix">
+							<div class="col-xs-3 col-sm-12 col-md-3">
+								<label for="productSizeQuantity" class="order-form__label">Quantity</label>
+							</div>
+							<div class="col-xs-9 col-sm-12 col-md-9">
+								<div class="order-form__select-wrapper">
+									<select class="order-form__select" name="productSize" id="productSizeQuantity">
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+									</select>
+								</div>
+							</div>
+						</div><!-- Quantity select end -->
+						<hr class="order-form__divider order-form__divider--s1">
+						<div class="product__cart">
+							<dl class="dl-inline">
+								<dt><strong class="upcase">Availability:</strong></dt>
+								<dd><strong class="upcase text-red">In stock</strong></dd>
+							</dl>
+							<!-- Price row -->
+							<div class="row">
+								<dl class="col-md-6">
+									<dt><div class="hidden-text">Old price of Nautical T-Shirt</div></dt>
+									<dd><del class="product__price product__price--old">$37.59</del></dd>
+								</dl>
+								<dl class="col-sm-12 col-md-6">
+									<dt><div class="hidden-text">New price of Nautical T-Shirt</div></dt>
+									<dd class="product__price product__price--new">$30.00</dd>
+								</dl>
+							</div><!-- Price row end -->
+
+							<div class="row">
+								<button class="product__buy">Add to cart</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-12 col-sm-8 col-md-8">
+					<div class="product__descr">
+						<!-- Product information -->
+						<strong class="product__full-name">Nautical print T-shirt</strong>
+						<div class="product__code">TH3863-00</div>
+
+						<div class="product__short-info">
+							An anchor and marine flags accent the chest of this nautical-inspired Lacoste T-shirt. A comfortable piece perfect for urban adventures.
+						</div>
+						
+						<!-- This element is used to show hidden content (.product__full-info) -->
+						<input type="checkbox" name="showFullInfo" id="showFullInfo" class="product__checkbox-show">
+						<label class="product__show-full-info" for="showFullInfo">Read more</label>
+						
+						<!-- This element is hidden on tablets screen -->
+						<div class="product__full-info" data-product-info>
+							<ul class="product__list">
+								<li class="product__list-item">Regular fit</li>
+								<li class="product__list-item">Crew neck</li>
+								<li class="product__list-item">Lacoste Yachting branding on chest</li>
+								<li class="product__list-item">Other</li>
+								<li class="product__list-item">Round neck</li>
+								<li class="product__list-item"><span class="upcase">Cotton (100%)</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<hr class="order-form__divider order-form__divider--s2">
+					<!-- Share buttons -->
+					<div class="widget-share">
+						<strong class="widget-share__text upcase">Share:</strong>
+						<div class="widget-share__social-icons">
+							<a href="#" class="social social--fb" role="button"><span class="hidden-text">Our Facebook page</span></a>
+							<a href="#" class="social social--twitter" role="button"><span class="hidden-text">Our Twitter page</span></a>
+							<a href="#" class="social social--google" role="button"><span class="hidden-text">Our Google page</span></a>
+							<a href="#" class="social social--pin" role="button"><span class="hidden-text">Our Pin page</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="banners clearfix">
+				<div class="banners__overview">
+					<ul class="banners__viewport clearfix" data-viewport>
+						<li class="banners__slide" data-slide>
+							<a class="banners__link" href="#">
+								<img class="banners__img" src="images/banners/1.jpg" height="231" width="302" alt="">
+
+								<span class="banners__info">
+									<strong class="banners__title">Our iconic blazer1</strong>
+									<span class="banners__btn">Read the story</span>
+								</span>
+							</a>
+						</li>
+						<li class="banners__slide" data-slide>
+							<a class="banners__link" href="#">
+								<img class="banners__img" src="images/banners/2.jpg" height="231" width="302" alt="">
+
+								<span class="banners__info">
+									<strong class="banners__title">Our iconic blazer2</strong>
+									<span class="banners__btn">Read the story</span>
+								</span>
+							</a>
+						</li>
+						<li class="banners__slide" data-slide>
+							<a class="banners__link" href="#">
+								<img class="banners__img" src="images/banners/3.jpg" height="231" width="302" alt="">
+
+								<span class="banners__info">
+									<strong class="banners__title">Our iconic blazer3</strong>
+									<span class="banners__btn">Read the story</span>
+								</span>
+							</a>
+						</li>
+					</ul>
+					<a href="#" role="button" class="control control-left" data-slide-prev><span class="hidden-text">Previous</span></a>
+					<a href="#" role="button" class="control control-right" data-slide-next><span class="hidden-text">Next</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.js"></script>
+</body>
+</html>

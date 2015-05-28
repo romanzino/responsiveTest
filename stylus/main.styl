@@ -1,0 +1,453 @@
+@import "settings"
+@import "sprites"
+
+.text-red
+	color #f3546a
+.product
+	font 400 14px font-OpenSans
+	padding-bottom 40px
+	+below(grid-mobile)
+		fs 13px
+	&__name
+		margin 32px 0 18px
+		fs 40px
+		upcase()
+		
+		+below(grid-desktop)
+			fs 36px
+		+below(grid-mobile)
+			fs 24px
+	&__img
+		block()
+		margin 27px auto
+		
+		+below(grid-desktop)
+			max-height 250px
+		+below(grid-mobile)
+			max-height 150px
+			margin 14px auto
+	&__img-wrapper
+		border 1px solid #e6e6e6
+		
+		+between(grid-tablet, grid-desktop)
+			margin-right 9px
+	&__descr
+		letter-spacing 2px
+		
+		+below(grid-desktop)
+			margin-top -116px
+			letter-spacing 1.7px
+		+below(grid-tablet)
+			margin-top 0
+	&__full-name
+		block()
+		margin-top 25px
+		fs 21px
+		
+		+below(grid-desktop)
+			margin-top 20px
+			fs 18px
+		+below(grid-mobile)
+			fs 16px
+	&__code	
+		margin-top -5px
+		fs 18px
+		
+		+below(grid-desktop)
+			margin-top 0
+			fs 16px
+	&__short-info
+		margin 26px 143px 0 0
+		line-height 1.45
+		
+		+below(grid-desktop)
+			margin 20px 60px 0 0
+			line-height 1.25
+		+below(grid-mobile)
+			margin 13px 0 0 0
+			line-height 1.2
+	&__full-info
+		+between(grid-tablet, grid-desktop)
+			hide()
+	&__cart
+		margin-top 24px
+		+below(grid-desktop)
+			margin-top 20px
+			fs 12px
+		+below(grid-mobile)
+			margin-top 25px
+			fs 14px
+			
+	&__price
+		fw bold
+		fs 42px
+		text-align center
+		
+		+below(grid-desktop)
+			fs 36px
+		&--old
+			color #c8c8c8
+			
+			+below(grid-desktop)
+				hide()
+		&--new
+			color #f3546a
+			
+			+below(grid-desktop)
+				color #000
+				text-align left
+	&__buy
+		position relative
+		size 80% 50px
+		margin-top 19px
+		padding 13px
+		background-color #fff
+		border 3px solid #464646
+		color #000
+		cursor pointer
+		fs 12px
+		letter-spacing .4px
+		upcase()
+		
+		+below(grid-mobile)
+			margin 21px 0 30px 0
+			fw bold
+			letter-spacing 2.8px
+			
+			&:after
+				absolute left right
+				bottom -30px
+				content " "
+				block()
+				border 0
+				height 1px
+				background-color #e3e5e7
+				color #e3e5e7
+
+		&:hover
+			border-color lighten(#464646, 40%)
+		&:focus
+			border-color lighten(#464646, 70%)
+			
+		+below(grid-desktop)
+			width 100%
+			margin-top 13px
+	
+	&__checkbox-show
+		hide()
+		&:checked
+			~ .product__full-info
+				block()
+			+ .product__show-full-info
+				&:after
+					position relative
+					top -2px
+					transform rotate(180deg)
+
+	&__show-full-info
+		hide()
+		+between(grid-mobile, grid-desktop)
+			position relative
+			display inline-block
+			margin-top 30px
+			padding-top 9px
+			border-top 2px solid #000
+			fw bold
+			fs 12px
+			color #000
+			upcase()
+			letter-spacing .2px
+			cursor pointer
+			
+			&:after
+				content " "
+				display inline-block
+				margin-left 16px
+				sprite($i_dropdown)			
+	&__list
+		margin 20px 0 0 17px
+		list-style-type disc
+		
+		+below(grid-mobile)
+			margin 8px 0 0 12px
+		
+		&-item
+			margin-bottom 1px
+
+.order-form
+	margin -20px 0 0 30px
+	
+	+below(grid-desktop)
+		margin-left 21px
+	+below(grid-tablet)
+		margin-top 27px
+	+below(grid-mobile)
+		margin 0
+	&__color-variants
+		margin 0 -15px 0 6px
+		
+		+below(grid-desktop)
+			margin 0
+		+below(grid-tablet)
+			float right
+	&__select-wrapper
+		position relative
+		float right
+		border 1px solid #969696
+		size 215px 42px
+		background-color #fff
+		overflow hidden
+		
+		+between(grid-tablet, grid-desktop)
+			float none
+		+below(grid-tablet)
+			width 195px
+		&:after
+			content " "
+			block()
+			position absolute
+			right 8px
+			top 50%
+			margin-top -2px
+			sprite($i_dropdown)
+	&__select
+		block()
+		size 235px 42px
+		padding-left 10px
+		border 0
+		font 400 15px font-OpenSans
+		upcase()
+		letter-spacing 1.5px
+		line-height 1px
+		cursor pointer
+		&:focus
+			outline 0
+		+below(grid-tablet)
+			width 215px
+	&__radio-color
+		hide()
+	&__label-color
+		block()
+		float left
+		size 43px 43px
+		margin-right 14.5px
+		cursor pointer
+		
+		+below(grid-desktop)
+			margin-right 12.5px
+		+below(grid-tablet)
+			margin-right 8px
+
+		&--gray
+			background-color #fbfbfb
+			
+		&--gray.active
+			border 1px solid #d2d2d2
+		&--blue
+			background-color #add4eb
+		&--blue.active
+			border 1px solid darken(#add4eb, 30%)
+		&--violet
+			background-color #bbafd9
+		&--violet.active
+				border 1px solid darken(#bbafd9, 30%)
+		&--purple
+			background-color #ebadc3
+		&--purple.active
+				border 1px solid darken(#ebadc3, 30%)
+				
+	.order-form__label-color
+		&:last-child
+			margin-right 0
+			
+	&__row
+		margin 20px 0 29px 0
+		
+		+below(grid-desktop)
+			margin 16px 0px 15px 0
+		+below(grid-mobile)
+			margin 22px 0px 6px 0
+	&__label
+		block()
+		padding-top 12px
+		fw bold
+		fs 15px
+		
+		+between(grid-tablet, grid-desktop)
+			padding-top 0
+			margin-bottom 10px
+	&__divider
+		block()
+		border 0
+		height 1px
+		background-color #e3e5e7
+		color #e3e5e7
+		
+		&--s1
+			margin-top 33px
+			+below(grid-desktop)
+				margin-top 24px
+		&--s2
+			margin 0 0 0 30px
+			+below(grid-desktop)
+				margin-top 24px
+			+below(grid-mobile)
+				margin-left 0
+			
+.widget-share
+	margin 30px 0 0 27px
+	
+	+below(grid-desktop)
+		margin-left 30px
+	+below(grid-mobile)
+		margin-left 0
+		text-align center
+	
+	&__text
+		float left
+		
+		+below(grid-desktop)
+			hide()
+	
+	&__social-icons
+		display inline-block
+		margin -8px 0 0 20px
+		
+		+below(grid-desktop)
+			margin -12px 0 0 -14px
+		+below(grid-tablet)
+			margin-left 0
+.social
+	block()
+	float left
+	size 33px 33px
+	margin-right 14px
+	spriteImage($i_facebook)
+	transition none
+	
+	&--fb
+		spritePosition($i_facebook)
+		&:hover
+			spritePosition($i_facebook_hover)
+	&--twitter
+		spritePosition($i_twitter)
+		&:hover
+			spritePosition($i_twitter_hover)
+	&--google
+		spritePosition($i_google)
+		&:hover
+			spritePosition($i_google_hover)
+	&--pin
+		spritePosition($i_pin)
+		&:hover
+			spritePosition($i_pin_hover)
+		
+.banners
+	margin-top 59px
+	+below(grid-mobile)
+		margin-top 12px
+	&__slide
+		position relative
+		float left
+		margin-left 38px
+		
+		+between(grid-tablet, grid-desktop)
+			margin-left 25px
+		+below(grid-mobile)
+			margin-left 0
+		
+	&__info
+		visibility hidden
+		absolute left right
+		top 0
+		bottom 0
+		background-color rgba(0, 0, 0, .45)
+		color #fff
+		opacity 0
+		z-index 10
+		transition visibility 0s linear 0.25s, opacity 0.25s linear
+		
+	&__title
+		position absolute
+		top 25%
+		left 56px
+		right 40px
+		text-align center
+		fs 24px
+		upcase()
+		line-height 1.3
+		
+		+below(grid-desktop)
+			top 20%
+			left 36px
+			right 30px
+			fs 21px
+			
+	&__btn
+		position absolute
+		top 63%
+		left 85px
+		right 81px
+		padding 9px
+		fs 12px
+		fw 600
+		color #000
+		background-color rgba(255, 255, 255, .8)
+		upcase()
+		text-align center
+		
+		+below(grid-desktop)
+			top 60%
+			left 50px
+			right 50px
+		
+	&__img
+		block()
+		height auto
+		
+		+between(grid-tablet, grid-desktop)
+			max-width 220px
+		+below(grid-mobile)
+			width 280px
+			
+	&__overview
+		position relative
+		margin auto
+		+below(grid-mobile)
+			size 280px 214px
+			overflow hidden
+	&__viewport
+		+below(grid-mobile)
+			position absolute
+		
+	&__link
+		+above(grid-mobile)
+			&:hover
+				.banners__info
+					visibility visible
+					opacity 1
+					transition-delay 0s
+		
+.banners
+	.banners__slide
+		&:first-child
+			margin-left 0
+			
+.control
+	hide()
+	position absolute
+	top 50%
+	margin-top -13.5px
+	size 17px 27px
+	spriteImage($i_prev)
+	z-index 10
+	cursor pointer
+	
+	+below(grid-mobile)
+		block()
+.control-left
+	spritePosition($i_prev)
+	left 10px
+.control-right
+	spritePosition($i_next)
+	right 10px

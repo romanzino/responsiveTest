@@ -1,0 +1,35 @@
+@import "settings"
+
+ie-support = true
+
+body
+	position absolute
+	width 100%
+
+.wrapper
+	width 1024px
+	position relative
+	margin 0 auto
+	padding 0 18px
+	
+.order-form
+	&__select
+		margin-top -10px
+		
+.banners
+	&__info
+		hide()
+		visibility visible
+		bg 'ie/bg.png' repeat
+
+	&__link
+		&:hover
+			.banners__info
+				block()
+	
+	&__btn
+		bg 'ie/bg-white.png' repeat
+		
+for i in (1..grid-columns-count)
+	.col-md-{i}
+		width ((i/12)*100)%
