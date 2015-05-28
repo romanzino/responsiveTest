@@ -33,33 +33,6 @@ App.ColorSelect = function () {
 	}
 }
 
-/*App.ProductInfo = function () {
-	var el = document.querySelector("[data-product-info]"),
-		open = false;
-
-	document.querySelector("[data-show-info-trigger]").onclick = function (event) {
-		//Is information open now?
-		if (!open) {
-			//Shows product information
-			el.style.display = "block";
-			this.innerHTML = "Hide information";
-			this.className = this.className + " active";
-
-			open = true;
-		}
-		else {
-			//Hides product information
-			el.style.display = "none";
-			this.innerHTML = "Read more";
-			this.className = this.className.replace(/\b active\b/,'');
-			
-			open = false;
-		}
-
-		event.preventDefault();
-	}
-}
-*/
 App.Slider = {
 	init: function () {
 		this.current = 0,
